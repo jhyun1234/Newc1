@@ -1,1 +1,2 @@
 C:\Users\User A\Desktop\Newc1\x64\Debug\Newc1.exe
+C:\Users\User A\Desktop\App1\Newc1\Newc1\x64\Debug\Newc1.exe
