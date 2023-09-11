@@ -132,6 +132,9 @@
   <ItemGroup>
     <ClInclude Include="2023.9.07 참조자.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="2023.9.08. 네임스페이스h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
