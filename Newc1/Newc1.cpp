@@ -1,76 +1,45 @@
 ﻿#include <iostream>
 using namespace std;
 
-#pragma region 클래스
-  // 사용자 정의 데이터 유형으로 속성과 함수가 포함되어  
-  // 있으며, 클래스를 통해 객체를 생성하여 접근하고 사용할 수 있는
-  // 집합체이다.
+#pragma region 복사 생성자
+ // 같은 객체를 복사하여 생성시킬 때 호출되는
+ // 생성자이다.
 
-class GameObject
+class Item
 {
-	// 접근 지정자
-	// 클래스 내부의 포함되어 있는 속성에 접근 범위를
-	// 제한하는 지정자이다.
-
-	// public
-	// 클래스 내부와 자기가 상속하고 있는 클래스 그리고 
-	// 클래스 외부에서 접근을 허용하는 지정자이다.
-
-	// protected
-	// 클래스 내부와 자기가 상속하고 있는 클래스까지만,
-	// 접근을 허용하는 지정자이다.
-
-    // private
-	// 클래스 내부에서만 접근을 허용하는 지정자이다.
-
-
-	
-	
+private: 
+	int price;
+	int* size;
 public:
-	float x;
-	void SendMessage()
+	Item()
 	{
-		cout << "메세지" << endl;
+		price = 100;
+		size = new int;
+		*size = 1999;
+
 	}
 
-protected:
-	float y;
-private:
-	float z;
-	
-	
-};
-
-#pragma endregion
-
-#pragma region 생성자와 소멸자
-   // 생성자
-   // 클래스의 인스턴스가 생성되는 시점에서 자동으로
-   // 호출되는 특수한 멤버 함수이다.
- 
-class Monster
-{ 
-private:
-	int health;
-public:
-	Monster()
+	Item(const Item & clone)
 	{
-		cout << "Monster 생성" << endl;
+
+		price = clone.price;
+		size = new int; // 자기 메모리를 해제하니깐 문제가 생기지 않는다.
+		*size = 551;
+	}
+	// 기본 생성자
+	// public Item() { }
+	
+	void Show()
+	{
+		cout << "price :" << price << endl;
+		cout << "*size :" << *size << endl;
 	}
 
-	// 생성자의 경우 객체가 생성될 때 단 한 번만 호출되며,
-	// 생성자는 반환형이 존재하지 않기 때문에
-	// 생성자가 호출되기 전에는 객체에 대한 메모리는 할당하지 않는다.
-	
-	// 소멸자
-	// 객체가 소멸될 때 자동으로 실행되는 클래스의 멤버 함수이다.
-	~Monster()
+	~Item()
 	{
-		cout << "Monster 소멸" << endl;
+		delete size;
 	}
-	
-	// 소멸자는 객체가 메모리에서 해제될 때 단 한번만 호출되며,
-	// 소멸자에는 매개변수를 생성하여 사용할 수 없다.
+
 };
 #pragma endregion
 
@@ -78,29 +47,39 @@ public:
 
 int main()
 {
-#pragma region 클래스
-	/*GameObject gameObject1;
-	GameObject gameObject2;
-
-	cout << sizeof(gameObject1) << endl;
-
-	gameObject1.SendMessage();
-	gameObject2.SendMessage();
-	gameObject1.x = 100;*/
+#pragma region 복사 생성자
+	Item item1;
+	item1.Show();
+	Item item2(item1);
+	item2.Show();
 #pragma endregion
 
-#pragma region 생성자와 소멸자
+#pragma region 얕은 복사
+	// 객체를 복사할 때 주소 값을 복사하여 같은 메모리를
+	// 가리키는 복사이다.
 
-	Monster monster;
+	/*int* ptr1 = new int;
 
-	//   8byte
-	//  [     ]
-	Monster* ptr= new Monster;
+	int* ptr2 = ptr1;
+
+	*ptr2 = 1000;
+	cout << "ptr1의 가리키는 값 :" << *ptr1 << endl;
+	cout << "ptr2의 가리키는 값 :" << *ptr2 << endl;
+
+	delete ptr1;*/
+	// delete ptr2; ERROR
+
+	// 얕은 복사는 객체가 메모리에서 해제될 때 생성자의
+	// 실행 순서와 반대로 소멸자가 실행된다.
 	
-	delete ptr;
-
+	// 복사한 객체가 먼저 해제되므로 원래 있던 객체가
+	// 해제될 때는 이미 해제된 메모리에 접근하게 된다.
 #pragma endregion
 
+#pragma region 깊은 복사
+	// 객체를 복사할 때, 참조 값이 아닌 인스턴스 자체를
+	// 새로 복사하여 서로 다른 메모리를 생성하는 복사이다.
+#pragma endregion
 
 	return 0;
 

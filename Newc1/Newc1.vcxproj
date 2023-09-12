@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="2023.9.07 참조자.h" />
+    <ClInclude Include="2023.9.11 클래스.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="2023.9.08. 네임스페이스h" />

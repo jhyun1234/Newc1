@@ -23,6 +23,9 @@
     <ClInclude Include="2023.9.07 참조자.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="2023.9.11 클래스.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="2023.9.08. 네임스페이스h" />
