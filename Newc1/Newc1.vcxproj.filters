@@ -18,12 +18,21 @@
     <ClCompile Include="Newc1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="2023.9.07 참조자.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="2023.9.11 클래스.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="2023.9.12 얕은복사 깊은복사.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
