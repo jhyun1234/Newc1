@@ -128,13 +128,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Mechanics.cpp" />
     <ClCompile Include="Newc1.cpp" />
+    <ClCompile Include="Vulture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="2023.9.07 참조자.h" />
     <ClInclude Include="2023.9.11 클래스.h" />
     <ClInclude Include="2023.9.12 얕은복사 깊은복사.h" />
+    <ClInclude Include="2023.9.13 상속.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Mechanics.h" />
+    <ClInclude Include="Vulture.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="2023.9.08. 네임스페이스h" />
