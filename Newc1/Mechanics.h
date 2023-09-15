@@ -8,9 +8,14 @@ protected:
 	int attack;
 
 public:
+	Mechanics();
+
+	
 	void Move();
+	
 
 	virtual void Attack();
 
+	virtual ~Mechanics();
 };
 
