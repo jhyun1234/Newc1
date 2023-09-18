@@ -128,10 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Firebet.cpp" />
+    <ClCompile Include="Ghost.cpp" />
     <ClCompile Include="Goliath.cpp" />
+    <ClCompile Include="Marine.cpp" />
     <ClCompile Include="Mechanics.cpp" />
     <ClCompile Include="Newc1.cpp" />
     <ClCompile Include="SiegeTank.cpp" />
+    <ClCompile Include="Unit.cpp" />
     <ClCompile Include="Vulture.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -139,10 +143,16 @@
     <ClInclude Include="2023.9.11 클래스.h" />
     <ClInclude Include="2023.9.12 얕은복사 깊은복사.h" />
     <ClInclude Include="2023.9.13 상속.h" />
+    <ClInclude Include="2023.9.15 가상함수.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Class.h" />
+    <ClInclude Include="Firebet.h" />
+    <ClInclude Include="Ghost.h" />
     <ClInclude Include="Goliath.h" />
+    <ClInclude Include="Marine.h" />
     <ClInclude Include="Mechanics.h" />
     <ClInclude Include="SiegeTank.h" />
+    <ClInclude Include="Unit.h" />
     <ClInclude Include="Vulture.h" />
   </ItemGroup>
   <ItemGroup>

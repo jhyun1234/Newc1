@@ -1,7 +1,5 @@
-﻿  Goliath.cpp
-  Mechanics.cpp
+﻿  Marine.cpp
   Newc1.cpp
-  SiegeTank.cpp
-  Vulture.cpp
+  Unit.cpp
   코드를 생성하고 있습니다...
   Newc1.vcxproj -> C:\Users\User A\Desktop\App1\Newc1\Newc1\x64\Debug\Newc1.exe
