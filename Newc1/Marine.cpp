@@ -6,6 +6,12 @@ int Marine::GetHP()
 	return health;
 }
 
+Marine::Marine()
+{
+	health = 40;
+	maxHP = health;
+}
+
 void Marine::Skill()
 {
 	cout << "스팀팩" << endl;
@@ -15,16 +21,18 @@ void Marine::SetHP(int value)
 {
 
 
-	if (value <= 100 && value >=0)
+	if (value >= 0 && value <=maxHP)
 	{
 		health = value;
 
 	}
-	else
-	{
-		cout << "잘못된 값이 들어왔습니다." << endl;
-	}
 	
+	
+}
+
+void Marine::RecoveryHP()
+{
+	health = maxHP;
 }
 
 

@@ -2,6 +2,12 @@
 #include "Firebet.h"
 using namespace std;
 
+Firebet::Firebet()
+{
+	health = 50;
+	maxHP = health;
+}
+
 void Firebet::Skill()
 {
 
@@ -9,19 +15,20 @@ void Firebet::Skill()
 
 void Firebet::SetHP(int value)
 {
-	if (value <= 100 && value >= 0)
+	if (value >= 0 && value <= maxHP)
 	{
 		health = value;
 
 	}
-	else
-	{
-		cout << "잘못된 값이 들어왔습니다." << endl;
-	}
+	
+}
 
+void Firebet::RecoveryHP()
+{
+	health = maxHP;
 }
 
 int Firebet::GetHP()
 {
-	return 0;
+	return health;
 }

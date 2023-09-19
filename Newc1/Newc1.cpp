@@ -1,7 +1,5 @@
 ﻿#include <iostream>
-#include "Marine.h"
-#include "Firebet.h"
-#include "Ghost.h"
+
 using namespace std;
 #pragma region 함수의 오버로딩
     // 같은 이름의 함수를 매개 변수의 자료형과 매개변수의
@@ -32,38 +30,65 @@ void Calculator(float x, float y)
 //}
 #pragma endregion
 
-void Recovery(Unit* unit)
+class Animal
 {
-    
+private:
 
+    char blood;
+
+    int age;
+    
+    float height;
+
+public:
+    Animal( int m_age , int m_height ) : age( m_age ) , height( m_height )
+    {
+
+        cout << "age : " << age << endl;
+        cout << "height :" << height << endl;
+
+    }
+
+#pragma region this 포인터
+    // 객체 자기 자신을 가리키는 포인터이다.
+#pragma endregion
+
+
+
+
+    //             'A'        5         3.25f   
+    Animal( char blood , int age , int height )
+    {
+        this->blood = blood;
+        this->age = age;
+        this->height = height;
+
+        cout << "객체의 주소 :" << this << endl;
+
+        blood = blood;
+    }
+
+};
+
+int * Value()
+{
+    int data = 10;
+    return &data;
 }
+
 
 int main()
 {
-#pragma region 함수의 오버로딩
 
-   /* Calculator('A', 'B');
-    Calculator(10, 10);
-    Calculator(5.25f, 4.25f);*/
-#pragma endregion
+   // Animal animal( 'A', 5 , 3.25f );
 
-#pragma region 순수 가상 함수
-    // 함수를 선언만 할 수 있으며, 해당 클래스에서 구현을 할 수 없고,
-    // 상속받은 하위 클래스에서 반드시 재정의를 해야하는 멤버 함수이다.
+    int* ptr = Value();
 
-    Marine* marine= new Marine;
-    Firebet* firebet = new Firebet;
-    Ghost* ghost = new Ghost;
+    cout << *ptr << endl;
 
+    *ptr = 300;
 
-    marine->Skill();
-    marine->SetHP(50);
-    
-    Recovery(marine);
-
-    cout << marine->GetHP() << endl;
-#pragma endregion
-
+    cout << *ptr << endl;
 
 	return 0;
 

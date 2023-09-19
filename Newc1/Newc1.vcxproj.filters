@@ -19,6 +19,12 @@
     <Filter Include="소스 파일\Mecahnics">
       <UniqueIdentifier>{820feb9a-945e-4d1b-a697-834dd9b78103}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\Bionic">
+      <UniqueIdentifier>{e690600b-58ee-4b52-9c5e-88c2f684bd95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Bionic">
+      <UniqueIdentifier>{29ffe960-b643-4f93-8e61-1a2ee2a5128e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Newc1.cpp">
@@ -40,16 +46,16 @@
       <Filter>소스 파일\Mecahnics</Filter>
     </ClCompile>
     <ClCompile Include="Unit.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Marine.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Bionic</Filter>
     </ClCompile>
     <ClCompile Include="Firebet.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Bionic</Filter>
     </ClCompile>
     <ClCompile Include="Ghost.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Bionic</Filter>
+    </ClCompile>
+    <ClCompile Include="Marine.cpp">
+      <Filter>소스 파일\Bionic</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -83,20 +89,23 @@
     <ClInclude Include="Mechanics.h">
       <Filter>헤더 파일\Mechanics</Filter>
     </ClInclude>
-    <ClInclude Include="Unit.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Marine.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Class.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Firebet.h">
+    <ClInclude Include="2023.9.19 순수 가상 함수.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Firebet.h">
+      <Filter>헤더 파일\Bionic</Filter>
+    </ClInclude>
     <ClInclude Include="Ghost.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Bionic</Filter>
+    </ClInclude>
+    <ClInclude Include="Marine.h">
+      <Filter>헤더 파일\Bionic</Filter>
+    </ClInclude>
+    <ClInclude Include="Unit.h">
+      <Filter>헤더 파일\Bionic</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

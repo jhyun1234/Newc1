@@ -1,24 +1,31 @@
 #include "Ghost.h"
 using namespace std;
+Ghost::Ghost()
+{
+	health = 45;
+	maxHP = health;
+}
 void Ghost::Skill()
 {
 }
 
 void Ghost::SetHP(int value)
 {
-	if (value <= 100 && value >= 0)
+	if (value >= 0 && value <= maxHP)
 	{
 		health = value;
 
 	}
-	else
-	{
-		cout << "잘못된 값이 들어왔습니다." << endl;
-	}
+	
 
+}
+
+void Ghost::RecoveryHP()
+{
+	health = maxHP;
 }
 
 int Ghost::GetHP()
 {
-	return 0;
+	return health;
 }
