@@ -107,6 +107,9 @@
     <ClInclude Include="Unit.h">
       <Filter>헤더 파일\Bionic</Filter>
     </ClInclude>
+    <ClInclude Include="2023.9.19 this 포인터.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="2023.9.08. 네임스페이스h" />

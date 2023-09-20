@@ -1,95 +1,108 @@
 ﻿#include <iostream>
-
+#include <memory>
 using namespace std;
-#pragma region 함수의 오버로딩
-    // 같은 이름의 함수를 매개 변수의 자료형과 매개변수의
-    // 수로 구분하여 여러 개를 선언할 수 있는 기능이다.
 
-void Calculator(char x, char y)
+#pragma region RAII 패턴
+       // 자원의 안전한 사용을 위해
+       // 객체가 쓰이는 범위를 벗어나게 되면
+       // 자원을 해제해주는 기법이다.
+       
+
+class File
 {
-    cout << "x + y : " << x + y << endl;
-
-}
-void Calculator(int x, int y)
-{
-    cout << "x + y : " << x + y << endl;
-
-}
-void Calculator(float x, float y)
-{
-    cout << "x + y : " << x + y << endl;
-}
-
-
-// 함수의 오버로딩의 경우 함수의 매개 변수에
-// 전달하는 인수의 형태를 보고 호출하므로,
-// 반환형으로 함수의 오버로딩은 생성할 수 없다.
-//int Calculator(float x, float y)
-//{
-//
-//}
+public:
+    File()
+    {
+        cout << "Create File" << endl;
+    }
+    ~File()
+    {
+        cout << "Delete File" << endl;
+    }
+};
 #pragma endregion
 
-class Animal
+class Player
 {
 private:
+    int health;
+#pragma region weak 포인터
+    // 자신이 참조하고 있는 원시 포인터의 강한 참조 카운트가 0이 되면
+    // expired 라는 상태가 되는데, 이는 원시 포인터의 참조 카운트가 
+    // 0이 되어 메모리가 해제되었으므로, 이 원시 포인터를 소유한 weak 포인터를
+    // 유효하지 않다고 판단하여 해제하는 포인터이다.
 
-    char blood;
-
-    int age;
-    
-    float height;
-
-public:
-    Animal( int m_age , int m_height ) : age( m_age ) , height( m_height )
-    {
-
-        cout << "age : " << age << endl;
-        cout << "height :" << height << endl;
-
-    }
-
-#pragma region this 포인터
-    // 객체 자기 자신을 가리키는 포인터이다.
 #pragma endregion
 
 
+    weak_ptr<Player> partner;
 
-
-    //             'A'        5         3.25f   
-    Animal( char blood , int age , int height )
+public:
+    Player()
     {
-        this->blood = blood;
-        this->age = age;
-        this->height = height;
-
-        cout << "객체의 주소 :" << this << endl;
-
-        blood = blood;
+        cout << "Create Player" << endl;
     }
-
+    ~Player()
+    {
+        cout << "Delete Player" << endl;
+    }
+    void SetPartner( weak_ptr<Player> partner )
+    {
+        this->partner = partner;
+    }
 };
-
-int * Value()
-{
-    int data = 10;
-    return &data;
-}
 
 
 int main()
 {
+#pragma region Unique 포인터
+    // 단 하나의 객체만 가리킬 수 있는
+    // 스마트 포인터 이다.
 
-   // Animal animal( 'A', 5 , 3.25f );
+    //std::unique_ptr<File> uptr1( new File );
 
-    int* ptr = Value();
+    //
 
-    cout << *ptr << endl;
+    //cout << "uptr1의 값 : " << uptr1 << endl;
 
-    *ptr = 300;
+    //std::unique_ptr<File> uptr2 = std::make_unique<File>();
 
-    cout << *ptr << endl;
+    //
 
+    //cout << "uptr2의 값 : " << uptr2 << endl;
+
+    //// 하나의 unique 포인터는 하나의 객체만 가질 수 있다.
+    //// 하지만 객체에 대한 소유권을 이전하는 것은 가능하다.
+
+    //std::unique_ptr<File> uptr3 = std::move( uptr2 );
+
+  
+    //cout << "uptr2의 값 : " << uptr2 << endl;
+    //cout << "uptr3의 값 : " << uptr3 << endl;
+#pragma endregion
+
+#pragma region Shared 포인터
+    // 하나의 객체에 여러 개의 포인터가 공유할 수 있으며,
+    // 공유할 때마다 참조 카운트를 이용해서 메모리를 관리하는
+    // 스마트 포인터이다.
+
+    /*shared_ptr<File>sptr1( new File() );
+
+    cout << sptr1.use_count() << endl;
+
+    shared_ptr<File>sptr2 = sptr1;
+
+    cout << sptr1.use_count() << endl;*/
+
+    shared_ptr<Player> player1 = make_shared<Player>();
+    shared_ptr<Player> player2 = make_shared<Player>();
+
+    player1->SetPartner( player2 );
+    player2->SetPartner( player1 );
+#pragma endregion
+
+
+   
 	return 0;
 
 }

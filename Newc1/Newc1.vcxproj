@@ -144,6 +144,7 @@
     <ClInclude Include="2023.9.12 얕은복사 깊은복사.h" />
     <ClInclude Include="2023.9.13 상속.h" />
     <ClInclude Include="2023.9.15 가상함수.h" />
+    <ClInclude Include="2023.9.19 this 포인터.h" />
     <ClInclude Include="2023.9.19 순수 가상 함수.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Class.h" />
