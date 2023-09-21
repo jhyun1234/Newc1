@@ -131,6 +131,7 @@
     <ClCompile Include="Firebet.cpp" />
     <ClCompile Include="Ghost.cpp" />
     <ClCompile Include="Goliath.cpp" />
+    <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="Marine.cpp" />
     <ClCompile Include="Mechanics.cpp" />
     <ClCompile Include="Newc1.cpp" />
@@ -146,11 +147,13 @@
     <ClInclude Include="2023.9.15 가상함수.h" />
     <ClInclude Include="2023.9.19 this 포인터.h" />
     <ClInclude Include="2023.9.19 순수 가상 함수.h" />
+    <ClInclude Include="2023.9.20 스마트 포인터.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Class.h" />
     <ClInclude Include="Firebet.h" />
     <ClInclude Include="Ghost.h" />
     <ClInclude Include="Goliath.h" />
+    <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Marine.h" />
     <ClInclude Include="Mechanics.h" />
     <ClInclude Include="SiegeTank.h" />

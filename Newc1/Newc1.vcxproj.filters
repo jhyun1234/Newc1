@@ -57,6 +57,9 @@
     <ClCompile Include="Marine.cpp">
       <Filter>소스 파일\Bionic</Filter>
     </ClCompile>
+    <ClCompile Include="LinkedList.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="2023.9.07 참조자.h">
@@ -108,6 +111,12 @@
       <Filter>헤더 파일\Bionic</Filter>
     </ClInclude>
     <ClInclude Include="2023.9.19 this 포인터.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="2023.9.20 스마트 포인터.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedList.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
