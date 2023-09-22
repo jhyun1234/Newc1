@@ -25,6 +25,12 @@
     <Filter Include="소스 파일\Bionic">
       <UniqueIdentifier>{29ffe960-b643-4f93-8e61-1a2ee2a5128e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\Computer">
+      <UniqueIdentifier>{8b50a63b-d73f-45f0-9e5b-5a415bdfd0b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Computer">
+      <UniqueIdentifier>{391dfdd2-16a1-4896-b70b-63365d9117d2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Newc1.cpp">
@@ -58,6 +64,24 @@
       <Filter>소스 파일\Bionic</Filter>
     </ClCompile>
     <ClCompile Include="LinkedList.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>소스 파일\Computer</Filter>
+    </ClCompile>
+    <ClCompile Include="Computer.cpp">
+      <Filter>소스 파일\Computer</Filter>
+    </ClCompile>
+    <ClCompile Include="Keyboard.cpp">
+      <Filter>소스 파일\Computer</Filter>
+    </ClCompile>
+    <ClCompile Include="Mouse.cpp">
+      <Filter>소스 파일\Computer</Filter>
+    </ClCompile>
+    <ClCompile Include="Player1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Bank.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -119,8 +143,29 @@
     <ClInclude Include="LinkedList.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="2023.9.08. 네임스페이스h" />
+    <ClInclude Include="2023.9.21 템플릿.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Computer.h">
+      <Filter>헤더 파일\Computer</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>헤더 파일\Computer</Filter>
+    </ClInclude>
+    <ClInclude Include="Keyboard.h">
+      <Filter>헤더 파일\Computer</Filter>
+    </ClInclude>
+    <ClInclude Include="Mouse.h">
+      <Filter>헤더 파일\Computer</Filter>
+    </ClInclude>
+    <ClInclude Include="2023 9.08 네임스페이스.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Player1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Bank.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
