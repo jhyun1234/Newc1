@@ -31,6 +31,12 @@
     <Filter Include="소스 파일\Computer">
       <UniqueIdentifier>{391dfdd2-16a1-4896-b70b-63365d9117d2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\etc">
+      <UniqueIdentifier>{f37fc699-b0f2-4e5f-8e54-8190d1bddfde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\etc">
+      <UniqueIdentifier>{a3c36755-cc9f-4709-9e0c-d08e06ce1c37}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Newc1.cpp">
@@ -78,10 +84,16 @@
     <ClCompile Include="Mouse.cpp">
       <Filter>소스 파일\Computer</Filter>
     </ClCompile>
+    <ClCompile Include="Bank.cpp">
+      <Filter>소스 파일\etc</Filter>
+    </ClCompile>
     <ClCompile Include="Player1.cpp">
+      <Filter>소스 파일\etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Bank.cpp">
+    <ClCompile Include="Item1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -161,10 +173,19 @@
     <ClInclude Include="2023 9.08 네임스페이스.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Player1.h">
+    <ClInclude Include="2023.9.22 다중 상속.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Bank.h">
+      <Filter>헤더 파일\etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Player1.h">
+      <Filter>헤더 파일\etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Item1.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

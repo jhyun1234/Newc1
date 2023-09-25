@@ -134,6 +134,8 @@
     <ClCompile Include="Firebet.cpp" />
     <ClCompile Include="Ghost.cpp" />
     <ClCompile Include="Goliath.cpp" />
+    <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="Item1.cpp" />
     <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="Marine.cpp" />
@@ -155,6 +157,7 @@
     <ClInclude Include="2023.9.19 순수 가상 함수.h" />
     <ClInclude Include="2023.9.20 스마트 포인터.h" />
     <ClInclude Include="2023.9.21 템플릿.h" />
+    <ClInclude Include="2023.9.22 다중 상속.h" />
     <ClInclude Include="Bank.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Class.h" />
@@ -163,6 +166,8 @@
     <ClInclude Include="Firebet.h" />
     <ClInclude Include="Ghost.h" />
     <ClInclude Include="Goliath.h" />
+    <ClInclude Include="Inventory.h" />
+    <ClInclude Include="Item1.h" />
     <ClInclude Include="Keyboard.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Marine.h" />
