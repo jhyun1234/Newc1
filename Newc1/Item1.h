@@ -13,5 +13,7 @@ public:
 
 	bool GetCheck();
 
+	
+
 };
 
