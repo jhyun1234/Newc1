@@ -13,7 +13,8 @@ public:
 
 	bool GetCheck();
 
-	
+	void SetItem( int price , const char* name );
 
+	void Information();
 };
 

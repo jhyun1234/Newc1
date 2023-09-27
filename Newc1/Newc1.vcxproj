@@ -159,6 +159,7 @@
     <ClInclude Include="2023.9.20 스마트 포인터.h" />
     <ClInclude Include="2023.9.21 템플릿.h" />
     <ClInclude Include="2023.9.22 다중 상속.h" />
+    <ClInclude Include="2023.9.26 인벤토리 시스템 제작.h" />
     <ClInclude Include="Bank.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Class.h" />
