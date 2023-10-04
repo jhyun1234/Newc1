@@ -179,7 +179,7 @@
     <ClInclude Include="Mouse.h">
       <Filter>헤더 파일\Computer</Filter>
     </ClInclude>
-    <ClInclude Include="2023 9.08 네임스페이스.h">
+    <ClInclude Include="2023.9.08 네임스페이스.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="2023.9.22 다중 상속.h">
@@ -202,6 +202,12 @@
     </ClInclude>
     <ClInclude Include="Inventory.h">
       <Filter>헤더 파일\Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="2023.10.2 선형 컨테이너.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="2023.9.27 final 키워드.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

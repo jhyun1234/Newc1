@@ -1,34 +1,22 @@
 #include <iostream>
+
 using namespace std;
 
-#pragma region Final
-   // 하위 클래스에서 더 이상 재정의 할 수 없도록
-   // 선언하는 기능이다.
-
-class Hero
+#pragma region 컨테이너 어댑터
 {
-public:
-	virtual void BasicSkill() {};
-	virtual void MagicSkill() final {};
+	// 기존 컨테이너의 인터페이스를 제한하여 만든 기능이
+	// 제한되거나 변형된 컨테이너 이다.
+}
+   
 
-};
 
-class Crusaders :public Hero
-{
-
-};
-class Fighter : public Crusaders
-{
-	void BasicSkill() {};
-	// void MagicSkill() {}; ERROR
-};
 #pragma endregion
 
 
 int main()
 {
-	
-	
+
+
 
 	return 0;
 }

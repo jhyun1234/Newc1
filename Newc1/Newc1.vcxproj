@@ -149,6 +149,7 @@
     <ClCompile Include="Vulture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="2023.10.2 선형 컨테이너.h" />
     <ClInclude Include="2023.9.07 참조자.h" />
     <ClInclude Include="2023.9.11 클래스.h" />
     <ClInclude Include="2023.9.12 얕은복사 깊은복사.h" />
@@ -160,6 +161,7 @@
     <ClInclude Include="2023.9.21 템플릿.h" />
     <ClInclude Include="2023.9.22 다중 상속.h" />
     <ClInclude Include="2023.9.26 인벤토리 시스템 제작.h" />
+    <ClInclude Include="2023.9.27 final 키워드.h" />
     <ClInclude Include="Bank.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Class.h" />
@@ -180,7 +182,7 @@
     <ClInclude Include="SiegeTank.h" />
     <ClInclude Include="Unit.h" />
     <ClInclude Include="Vulture.h" />
-    <ClInclude Include="2023 9.08 네임스페이스.h" />
+    <ClInclude Include="2023.9.08 네임스페이스.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
