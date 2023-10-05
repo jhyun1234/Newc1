@@ -1,70 +1,52 @@
 ﻿#include <iostream>
-#include <stack>
-#include <queue>
-
+#include <list>
 using namespace std;
-
-#pragma region 컨테이너 어댑터
-
-	// 기존 컨테이너의 인터페이스를 제한하여 만든 기능이
-	// 제한되거나 변형된 컨테이너 이다.
-
-   
-
-
-#pragma endregion
 
 
 int main()
 {
-#pragma region  컨테이너 어댑터(stack)
 
+#pragma region 문자열
+	// KEY와 VALUE가 하나의 구성으로 이루어진
+	// 컨테이너 이다.
 
+	/*std::string content = "Content";
 
-	//std::stack<int> stack;
+	cout << "content 변수의 값 :" << content << endl;
+	cout << "content 변수의 값 :" << content.size() << endl;
+	content = "League";
+	cout << "content 변수의 값 :" << content << endl;
 
-	//stack.push( 10 );
-	//stack.push( 20 );
-	//stack.push( 30 );
-	//stack.push( 40 );
-	//stack.push( 50 );
-
-	//// cout << "Stack의 TOP : " << stack.top() << endl;
-
-	//
-	//while ( stack.empty() == false )
-	//{
-	//	cout << "Stack의 TOP : " << stack.top() << endl;
-	//	stack.pop();
-
-	//}
-
-
-	// 50
-	// 40
-	// 30
-	// 20
-	// 10
-
+	cout << content.find( "ag" ) << endl;*/
 #pragma endregion
 
+#pragma region 연관 컨테이너
+     
+	std::list<int>datalist;
 
-#pragma region 컨테이너 어댑터(Queue)
+	datalist.push_back( 10 );
+	datalist.push_front( 50 );
+	datalist.push_front( 25 );
+	datalist.push_back( 33 );
+ // 25 50 10 33
 
-	std::queue<int> queue;
-	queue.push( 10 );
-	queue.push( 20 );
-	queue.push( 30 );
-	queue.push( 40 );
-	queue.push( 50 );
 
-	while ( queue.size() )
+	// datalist.begin() : 첫 번째 주소로 반환
+	// datalist.end() : 마지막에 있는 그 다음 주소를 반환
+
+
+	//(begin)       (end)
+	// 25 50 10 33 
+
+	list<int>::iterator iter;
+	
+	for ( iter = datalist.begin(); iter != datalist.end(); iter++ )
 	{
-		cout << queue.front() << endl;
-		queue.pop();
-	}
+		cout << *iter << endl;
 
+	}
 #pragma endregion
+
 
 
 	return 0;
