@@ -1,53 +1,65 @@
 ﻿#include <iostream>
-#include <list>
+#include <map>
+#include<set>
 using namespace std;
 
 
 int main()
 {
-
-#pragma region 문자열
-	// KEY와 VALUE가 하나의 구성으로 이루어진
-	// 컨테이너 이다.
-
-	/*std::string content = "Content";
-
-	cout << "content 변수의 값 :" << content << endl;
-	cout << "content 변수의 값 :" << content.size() << endl;
-	content = "League";
-	cout << "content 변수의 값 :" << content << endl;
-
-	cout << content.find( "ag" ) << endl;*/
-#pragma endregion
-
-#pragma region 연관 컨테이너
-     
-	std::list<int>datalist;
-
-	datalist.push_back( 10 );
-	datalist.push_front( 50 );
-	datalist.push_front( 25 );
-	datalist.push_back( 33 );
- // 25 50 10 33
+#pragma region std::map
 
 
-	// datalist.begin() : 첫 번째 주소로 반환
-	// datalist.end() : 마지막에 있는 그 다음 주소를 반환
 
+	/*std::map<string , int> mapData;
 
-	//(begin)       (end)
-	// 25 50 10 33 
+	mapData.insert( make_pair( "Sword" , 5000 ) );
+	mapData.insert( make_pair( "Armor" , 2500 ) );
 
-	list<int>::iterator iter;
-	
-	for ( iter = datalist.begin(); iter != datalist.end(); iter++ )
+	map<string , int>::iterator mapIter;
+
+	for ( mapIter = mapData.begin(); mapIter != mapData.end(); mapIter++ )
 	{
-		cout << *iter << endl;
+		cout << "Key :" << mapIter->first << endl;
+		cout << "Value :" << mapIter->second << endl;
+	}
+
+	if ( mapData.find( "Sword" ) != mapData.end() )
+	{
+		cout << "데이터가 존재합니다." << endl;
 
 	}
+	else
+	{
+		cout << "데이터가 존재하지 않습니다." << endl;
+	}*/
 #pragma endregion
 
 
+#pragma region std::set
+
+	std::set<int> setData;
+
+	// 중복된 값이 들어갔을때
+	// 중복된 값을 제거하고 다시 저장한다.
+
+	setData.insert( 10 );
+	setData.insert( 20 );
+	setData.insert( 30 );
+	setData.insert( 40 );
+
+	set<int>::iterator setIter;
+	setIter = setData.begin();
+	setData.erase( setIter );
+
+	for ( setIter = setData.begin(); setIter != setData.end(); setIter++ )
+	{
+		cout << "Key :" << *setIter<< endl;
+		
+	}
+
+
+
+#pragma endregion
 
 	return 0;
 }
